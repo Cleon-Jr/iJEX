@@ -1,0 +1,49 @@
+unit uConfig;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TfrmConfig = class(TForm)
+    Panel1: TPanel;
+    SpeedButton1: TSpeedButton;
+    GroupBox1: TGroupBox;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Edit2: TEdit;
+    BitBtn1: TBitBtn;
+    Label3: TLabel;
+    Edit3: TEdit;
+    BitBtn2: TBitBtn;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmConfig: TfrmConfig;
+
+implementation
+
+{$R *.dfm}
+
+uses uDM;
+
+procedure TfrmConfig.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+action:= cafree;
+end;
+
+procedure TfrmConfig.SpeedButton1Click(Sender: TObject);
+begin
+self.Close;
+end;
+
+end.
